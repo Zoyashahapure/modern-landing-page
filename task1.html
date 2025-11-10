@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SweetPassion | Online Cake Shop</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="task1.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🍰 SweetPassion</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to <span>SweetPassion</span></h1>
+      <p>Delicious cakes made with love & passion.</p>
+      <button class="cta-btn" onclick="alert('Thanks for visiting SweetPassion! 🎂')">Order Now</button>
+    </div>
+  </section>
+
+  <!-- Features / Menu Section -->
+  <section class="features" id="menu">
+    <div class="feature-card">
+      <i class="fa-solid fa-cake-candles"></i>
+      <h3>Birthday Cakes</h3>
+      <p>Celebrate your special day with our freshly baked delights!</p>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Custom Cakes</h3>
+      <p>Personalize your cake for any occasion — we bake your dreams!</p>
+    </div>
+    <div class="feature-card">
+      <i class="fa-solid fa-ice-cream"></i>
+      <h3>Cupcakes & More</h3>
+      <p>Sweet treats and desserts that melt your heart.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 SweetPassion | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+
+<script>
+  // Simple fade-in animation when scrolling
+  const cards = document.querySelectorAll(".feature-card");
+
+  window.addEventListener("scroll", () => {
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < window.innerHeight - 100) {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
